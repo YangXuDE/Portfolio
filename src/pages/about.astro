@@ -2,10 +2,11 @@
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title={`About | ${siteConfig.author}`} description={siteConfig.description}>
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -16,7 +17,7 @@ const base = import.meta.env.BASE_URL;
 					width="1553"
 					height="873"
 					src={`${base}assets/at-work.jpg`}
-					alt="Jeanine White at work with a colleague"
+					alt={`${siteConfig.author} (${siteConfig.authorEn})`}
 				/>
 			</Hero>
 
