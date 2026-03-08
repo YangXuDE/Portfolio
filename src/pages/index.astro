@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
+// Component Imports
 import CallToAction from '../components/CallToAction.astro';
+// Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
@@ -8,13 +10,16 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Skills from '../components/Skills.astro';
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { siteConfig } from '../config';
 
+// Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -23,19 +28,19 @@ const base = import.meta.env.BASE_URL;
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title={siteConfig.heroTitle}
-					tagline={siteConfig.tagline}
+					title="Hello, my name is Jeanine White"
+					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="hammer" size="1.33em" /> Engineer</Pill>
+						<Pill><Icon icon="wheel" size="1.33em" /> Geek</Pill>
+						<Pill><Icon icon="anime" size="1.33em" /> Anime fan</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt={`${siteConfig.author} (${siteConfig.authorEn})`}
+					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
 					src={`${base}assets/portrait.jpg`}
