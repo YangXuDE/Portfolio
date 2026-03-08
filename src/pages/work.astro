@@ -5,7 +5,8 @@ import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { siteConfig } from '../config';
+// 如果你的模板没有 config 文件，可能会报错，但我保留了原模板的引入以防万一
+import { siteConfig } from '../config'; 
 
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
@@ -13,14 +14,14 @@ const projects = (await getCollection('work')).sort(
 ---
 
 <BaseLayout
-	title={`Work | ${siteConfig.author}`}
-	description={siteConfig.description}
+	title={`作品集 (Portfolio) | 徐阳`}
+	description="徐阳 (Yang Xu) 的精选项目、摄影作品与技术随笔。"
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
+				title="项目与创作 / Portfolio"
+				tagline="这里收录了我的工程计算项目、Web开发实践、以及在欧洲各地的镜头记录。探索跨越代码与光影的足迹。"
 				align="start"
 			/>
 			<Grid variant="offset">
