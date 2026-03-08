@@ -11,7 +11,7 @@ const base = import.meta.env.BASE_URL;
 		<main class="wrapper about">
 			<Hero
 				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				tagline={siteConfig.tagline}
 			>
 				<img
 					width="1553"
@@ -25,35 +25,163 @@ const base = import.meta.env.BASE_URL;
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed
-						do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						{siteConfig.author}（{siteConfig.authorEn}）。千禧一代，TUM 硕士就读，理工科 / 极客 / 摄影师 / 现充二次元 /
+						德国留学中，热爱技术与设计。简单、乐观、爱创造。
 					</p>
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						你可以在{' '}
+						<a href="https://github.com/YangXuDe" target="_blank" rel="noopener noreferrer">GitHub</a> 上找到我的项目，
+						也欢迎通过邮件联系我：<a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>。
 					</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<ul class="timeline">
+						<li class="entry">
+							<div class="entry-head">
+								<strong>Technical University of Munich (TUM)</strong>
+								<span class="meta">Straubing, Germany · 09.2025 – Present</span>
+							</div>
+							<div class="entry-sub">M.Sc. in Sustainable Energy and Process Engineering</div>
+							<ul>
+								<li>
+									<strong>Selected Courses:</strong> Technical Thermodynamics and Balances, Conceptual Design of
+									Bioprocesses, Energy Process Engineering, Conceptual Design of Fluid Separation, Modeling and
+									Optimization of Energy Systems and Processes, Corrosion and Surface Technology.
+								</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>Technical University of Braunschweig</strong>
+								<span class="meta">Braunschweig, Germany · 09.2023 – 09.2025</span>
+							</div>
+							<div class="entry-sub">M.Sc. in Computational Science in Engineering</div>
+							<ul>
+								<li>
+									<strong>Selected Courses:</strong> Ordinary and Partial Differential Equations, Algorithms and
+									Programming, Finite Element Method, Pattern Recognition, Data-Driven Modeling.
+								</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>PDL Language School</strong>
+								<span class="meta">Dortmund, Germany · 01.2023 – 09.2023</span>
+							</div>
+							<div class="entry-sub">Intensive German Language Program &amp; DSH Preparation</div>
+							<ul>
+								<li>Successfully completed B1 and B2 level courses.</li>
+								<li>Intensively prepared for the German University Entrance Language Examination (DSH).</li>
+								<li><strong>Result:</strong> Passed DSH1 Examination.</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>Anhui Polytechnic University</strong>
+								<span class="meta">Wuhu, China · 09.2018 – 06.2022</span>
+							</div>
+							<div class="entry-sub">B.Eng. in Vehicle Engineering</div>
+							<ul>
+								<li>
+									<strong>Selected Courses:</strong> Engineering Mathematics, Physics, Chemistry, C/Matlab
+									Programming, Fundamentals of Mechanical Engineering, Materials Science and Engineering,
+									Electrical and Electronic Engineering, Fluid Mechanics, Thermodynamics, Automation Principles,
+									Vehicle Structure, Design and Transmission Technology.
+								</li>
+								<li><strong>Honors and Awards:</strong> First-Class Scholarship, Heli Scholarship, etc.</li>
+								<li>
+									<strong>Bachelor Thesis:</strong> Design of an Intelligent Connected Suspension System for
+									Automobiles (Awarded Outstanding Thesis 2022).
+								</li>
+								<li><strong>GPA:</strong> 3.48/4.0 (Top 5% of class).</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
+				<h2 class="section-title">Professional Experience</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<ul class="timeline">
+						<li class="entry">
+							<div class="entry-head">
+								<strong>Mercurtrade Holding k.s.</strong>
+								<span class="meta">Pudong, Shanghai · 07.2022 – 01.2023</span>
+							</div>
+							<div class="entry-sub">Intern – Quality Assistant</div>
+							<ul>
+								<li>Developed 3D models using SolidWorks to support product design and documentation.</li>
+								<li>Performed dimensional quality inspections using precision measuring instruments.</li>
+								<li>Researched technical standards (e.g., ASME Z14.5, ASTM E2660) and applied them to testing procedures.</li>
+								<li>Operated SST chambers according to ISO 9227 for corrosion resistance testing.</li>
+								<li>Assisted in setting up metallographic analysis workflows and sample preparation.</li>
+								<li>Provided translation and technical communication support between engineers and suppliers.</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>AHMUNC2019 (Anhui Provincial Model United Nations Conference)</strong>
+								<span class="meta">Suzhou, China · 12.2018 – 08.2019</span>
+							</div>
+							<div class="entry-sub">Director of Technology and Outreach</div>
+							<ul>
+								<li>Collaborated with the organizing committee to plan and coordinate conference operations.</li>
+								<li>Oversaw IT-related budgets and technical resources to optimize cost efficiency.</li>
+								<li>Designed visual materials including posters, logos, and event documents using Adobe Photoshop, Illustrator, and InDesign.</li>
+								<li>Contributed to event promotion and participant engagement through creative digital outreach.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Personal Projects</h2>
+				<div class="content">
+					<ul class="timeline">
+						<li class="entry">
+							<div class="entry-head">
+								<strong>Patents</strong>
+								<span class="meta">07.2020 – 08.2021</span>
+							</div>
+							<ul>
+								<li>Utility Model Patent: Automatic Car Washing Device for Wastewater Reuse (ZL202023239870.4).</li>
+								<li>Design Patent: Dust-Free Blackboard Eraser (ZL202030636393.1).</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>Visual SLAM</strong>
+								<span class="meta">03.2020 – 10.2020</span>
+							</div>
+							<ul>
+								<li>Developed a water-saving automated car washing platform using Visual SLAM technology.</li>
+								<li>Designed a self-circulating wastewater recycling system for a miniaturized car washing platform.</li>
+								<li>Conducted theoretical research on the application of small-scale shared car washing systems in residential areas.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Technical Skills</h2>
+				<div class="content">
+					<ul class="kv">
+						<li><strong>Languages:</strong> Chinese (Native), English (C1 – Advanced), German (B2 – Upper Intermediate)</li>
+						<li>
+							<strong>Software and Tools:</strong> Microsoft Office, SolidWorks, UGNX, Matlab, CATIA, Cinema 4D,
+							Python, ROS
+						</li>
+					</ul>
 				</div>
 			</section>
 		</main>
@@ -90,6 +218,40 @@ const base = import.meta.env.BASE_URL;
 
 	.content {
 		grid-column: 2 / 4;
+	}
+
+	.timeline,
+	.kv {
+		margin: 0;
+		padding-left: 1.25rem;
+	}
+
+	.entry {
+		margin: 0 0 1.25rem 0;
+	}
+
+	.entry-head {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.entry-sub {
+		color: var(--gray-300);
+		margin-top: 0.125rem;
+	}
+
+	.meta {
+		color: var(--gray-400);
+		font-size: var(--text-sm);
+	}
+
+	.content :global(ul) {
+		margin: 0.5rem 0 0 0;
+	}
+
+	.content :global(li + li) {
+		margin-top: 0.35rem;
 	}
 
 	.content :global(a) {
