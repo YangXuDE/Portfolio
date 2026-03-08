@@ -28,22 +28,22 @@ const base = import.meta.env.BASE_URL;
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="你好，我是徐阳 (Yang Xu)"
+					tagline="M.Sc. in Sustainable Energy @ TUM | Geek | Photographer | Designer"
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="hammer" size="1.33em" /> Engineer</Pill>
-						<Pill><Icon icon="wheel" size="1.33em" /> Geek</Pill>
+						<Pill><Icon icon="terminal-window" size="1.33em" /> Geek</Pill>
+						<Pill><Icon icon="camera" size="1.33em" /> Photographer</Pill>
 						<Pill><Icon icon="anime" size="1.33em" /> Anime fan</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="徐阳的照片 (Yang Xu)"
 					width="480"
 					height="620"
-					src={`${base}assets/portrait.jpg`}
+					src={`${base}assets/profile.jpg`}
 				/>
 			</header>
 
@@ -53,8 +53,8 @@ const base = import.meta.env.BASE_URL;
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>作品集 / Selected Work</h3>
+					<p>这里展示了我近期的一些项目、摄影作品与技术文章。</p>
 				</header>
 
 				<div class="gallery">
@@ -71,7 +71,7 @@ const base = import.meta.env.BASE_URL;
 
 				<div class="cta">
 					<CallToAction href={`${base}work/`}>
-						View All
+						查看全部 (View All)
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
@@ -79,17 +79,16 @@ const base = import.meta.env.BASE_URL;
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h3>教育背景 / Education</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						我的学术旅程跨越了不同的学科与城市。从车辆工程到工程计算，再到如今的慕尼黑工业大学。
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							['慕尼黑工业大学 (TUM)', '布伦瑞克工业大学', '安徽工程大学'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
