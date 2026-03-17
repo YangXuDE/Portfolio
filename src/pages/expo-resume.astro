@@ -1,0 +1,438 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title={`Expo Resume | ${siteConfig.author}`} description="展会兼职简历 - 徐阳 (Yang Xu)">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Expo Resume"
+				tagline="展会兼职应聘简历 | 专注工业/汽车展会中德英三语翻译与技术讲解"
+			>
+				<img
+					width="400"
+					height="400"
+					src={`${base}assets/img/profile2.jpeg`}
+					alt={`${siteConfig.author}`}
+					class="profile-img"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Contact</h2>
+				<div class="content">
+					<div class="contact-grid">
+						<div class="contact-item">
+							<span class="contact-label">Name</span>
+							<span class="contact-value">徐阳 (Yang XU)</span>
+						</div>
+						<div class="contact-item">
+							<span class="contact-label">Location</span>
+							<span class="contact-value">慕尼黑, 德国</span>
+						</div>
+						<div class="contact-item">
+							<span class="contact-label">Email</span>
+							<a href={`mailto:${siteConfig.email}`} class="contact-link">{siteConfig.email}</a>
+						</div>
+						<div class="contact-item">
+							<span class="contact-label">LinkedIn</span>
+							<a href="https://linkedin.com/in/yang-xu-6ab4a2291" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/yang-xu</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Core Strengths</h2>
+				<div class="content">
+					<div class="strengths">
+						<div class="strength-card">
+							<div class="strength-icon">🌐</div>
+							<h3>Multilingual Communication</h3>
+							<ul>
+								<li><strong>中文:</strong> 母语</li>
+								<li><strong>英语:</strong> C1 流利</li>
+								<li><strong>德语:</strong> B2，日常及展会工作沟通无碍</li>
+							</ul>
+						</div>
+						<div class="strength-card">
+							<div class="strength-icon">🎪</div>
+							<h3>Expo Experience</h3>
+							<ul>
+								<li>国际顶级展会实战经验 (IAA, Intersolar)</li>
+								<li>IAA 汉诺威车展 + Intersolar 太阳能展翻译</li>
+								<li>熟悉德中商务沟通方式</li>
+							</ul>
+						</div>
+						<div class="strength-card">
+							<div class="strength-icon">⚙️</div>
+							<h3>Engineering Background</h3>
+							<ul>
+								<li>车辆工程 + 计算科学 + 可持续能源</li>
+								<li>快速理解并准确转述复杂技术产品</li>
+								<li>汽车、机械、能源领域专业知识</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Expo & Work Experience</h2>
+				<div class="content">
+					<ul class="timeline">
+						<li class="entry highlight">
+							<div class="entry-head">
+								<strong>阳光电源 (SUNGROW)</strong>
+								<span class="meta badge">Intersolar Europe 2025</span>
+								<span class="meta">德国，慕尼黑 · 05.2025</span>
+							</div>
+							<div class="entry-sub">展台翻译 / 技术讲解</div>
+							<ul>
+								<li>在 Intersolar 2025（慕尼黑国际太阳能展）担任阳光电源展台的中英双语翻译，协助现场技术讲解与国际商务洽谈</li>
+								<li>负责接待海外客户，结合专业知识准确讲解 PowerTitan 大型液冷储能系统、1+X 模块化逆变器以及 iHomeManager 户用智慧能源系统等核心展品的技术优势</li>
+								<li>协助跨国销售团队与意向客户沟通光伏储能产品参数、系统适配性及欧洲市场应用方案，确保现场信息传达专业且无误差</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>中国重汽集团 (SINOTRUK)</strong>
+								<span class="meta badge">IAA 国际交通运输博览会</span>
+								<span class="meta">德国，汉诺威 · 09.2024</span>
+							</div>
+							<div class="entry-sub">展会翻译 / 技术讲解</div>
+							<ul>
+								<li>担任中国重汽集团的中、德、英三语翻译，协助现场技术交流与商务洽谈</li>
+								<li>负责国际客户接待，运用车辆工程专业知识准确解答关于商用车展品的技术问题</li>
+								<li>协助沟通中德双方团队与现场工作人员，确保展会期间信息传达零误差、活动顺利推进</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>Mercurtrade Holding k.s.</strong>
+								<span class="meta">中国，上海 · 07.2022 – 01.2023</span>
+							</div>
+							<div class="entry-sub">Lab 实习生：质量助理</div>
+							<ul>
+								<li>使用专业测量工具进行产品尺寸检查与质量控制；使用 SolidWorks 创建 3D 模型</li>
+								<li>负责技术标准调研（ASME Z14.5、ASTM E2660）；根据 ISO 9227 操作盐雾腐蚀测试箱</li>
+								<li>提供跨部门语言翻译支持</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>AHMUNC2019 (安徽省模拟联合国大会)</strong>
+								<span class="meta">中国，宿州 · 12.2018 – 08.2019</span>
+							</div>
+							<div class="entry-sub">技术与推广总监（组委会成员）</div>
+							<ul>
+								<li>跨部门协同规划、开发并协调大型会议日程</li>
+								<li>运用 Ps/Illustrator/InDesign 进行宣传物料设计与制作</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<ul class="timeline">
+						<li class="entry">
+							<div class="entry-head">
+								<strong>慕尼黑工业大学 (TUM)</strong>
+								<span class="meta">德国，施特劳宾 · 09.2025 – 至今</span>
+							</div>
+							<div class="entry-sub">可持续能源与过程工程 · 硕士</div>
+							<ul>
+								<li>核心课程: 工程热力学与平衡、生物工艺概念设计、能源系统建模与优化、腐蚀与表面技术</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>布伦瑞克工业大学 (TU Braunschweig)</strong>
+								<span class="meta">德国，布伦瑞克 · 09.2023 – 09.2025</span>
+							</div>
+							<div class="entry-sub">计算科学工程 (CSE) · 硕士</div>
+							<ul>
+								<li>核心课程: 偏微分方程、算法与编程、有限元方法、模式识别、数据驱动建模</li>
+							</ul>
+						</li>
+
+						<li class="entry">
+							<div class="entry-head">
+								<strong>安徽工程大学</strong>
+								<span class="meta">中国，芜湖 · 09.2018 – 06.2022</span>
+							</div>
+							<div class="entry-sub">车辆工程 · 学士</div>
+							<ul>
+								<li>GPA: 3.48/4.0 (专业前5名)</li>
+								<li>荣誉: 一等奖学金、APMCM数学建模竞赛三等奖、全国节能减排竞赛二等奖</li>
+								<li>毕业论文: 基于智能互联的汽车自适应照明系统设计 (获评优秀毕业论文)</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<div class="skills-section">
+						<div class="skill-category">
+							<h3>Languages</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">中文 (母语)</span>
+								<span class="skill-tag">English (C1)</span>
+								<span class="skill-tag">Deutsch (B2)</span>
+							</div>
+						</div>
+						<div class="skill-category">
+							<h3>Software</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">SolidWorks</span>
+								<span class="skill-tag">Matlab</span>
+								<span class="skill-tag">CATIA</span>
+								<span class="skill-tag">C4D</span>
+								<span class="skill-tag">Python</span>
+								<span class="skill-tag">Office</span>
+							</div>
+						</div>
+						<div class="skill-category">
+							<h3>Other</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">中国C1驾照</span>
+								<span class="skill-tag">Adobe PS/AI/ID</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	.profile-img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+		margin-top: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	/* Contact Section */
+	.contact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+	}
+
+	.contact-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.contact-label {
+		color: var(--gray-400);
+		font-size: var(--text-sm);
+	}
+
+	.contact-value {
+		color: var(--gray-100);
+	}
+
+	.contact-link {
+		color: var(--accent-regular);
+		text-decoration: none;
+	}
+
+	.contact-link:hover {
+		text-decoration: underline;
+	}
+
+	/* Strengths Section */
+	.strengths {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.strength-card {
+		background: var(--gray-999_soft);
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		transition: border-color var(--theme-transition);
+	}
+
+	.strength-card:hover {
+		border-color: var(--accent-regular);
+	}
+
+	.strength-icon {
+		font-size: 2rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.strength-card h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0 0 0.75rem 0;
+	}
+
+	.strength-card ul {
+		margin: 0;
+		padding-left: 1.25rem;
+	}
+
+	.strength-card li {
+		margin-bottom: 0.35rem;
+		color: var(--gray-300);
+	}
+
+	/* Timeline */
+	.timeline,
+	.kv {
+		margin: 0;
+		padding-left: 1.25rem;
+	}
+
+	.entry {
+		margin: 0 0 1.5rem 0;
+	}
+
+	.entry.highlight {
+		background: linear-gradient(135deg, rgba(100, 108, 255, 0.1), rgba(139, 92, 246, 0.05));
+		border-left: 3px solid var(--accent-regular);
+		padding-left: 1rem;
+		margin-left: -1.25rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	.entry-head {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.entry-sub {
+		color: var(--gray-300);
+		margin-top: 0.125rem;
+	}
+
+	.meta {
+		color: var(--gray-400);
+		font-size: var(--text-sm);
+	}
+
+	.badge {
+		display: inline-block;
+		background: var(--accent-regular);
+		color: var(--accent-text-over);
+		padding: 0.125rem 0.5rem;
+		border-radius: 999rem;
+		font-size: var(--text-xs);
+		width: fit-content;
+		margin-top: 0.25rem;
+	}
+
+	.content :global(ul) {
+		margin: 0.5rem 0 0 0;
+	}
+
+	.content :global(li + li) {
+		margin-top: 0.35rem;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	/* Skills Section */
+	.skills-section {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.skill-category h3 {
+		font-size: var(--text-base);
+		color: var(--gray-0);
+		margin: 0 0 0.5rem 0;
+	}
+
+	.skill-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.skill-tag {
+		background: var(--gray-999_soft);
+		border: 1px solid var(--gray-800);
+		color: var(--gray-300);
+		padding: 0.35rem 0.75rem;
+		border-radius: 999rem;
+		font-size: var(--text-sm);
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
