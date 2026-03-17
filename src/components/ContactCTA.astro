@@ -5,9 +5,9 @@ import { siteConfig } from '../config';
 ---
 
 <aside>
-	<h2>Interested in working together?</h2>
-	<CallToAction href={`mailto:${siteConfig.email}`}>
-		Send Me a Message
+	<h2>动动手指，破除AT立场</h2>
+	<CallToAction href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hi Yang! I found your portfolio and would like to connect.')}`}>
+		WhatsApp Me
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
 </aside>

@@ -33,4 +33,6 @@ export const siteConfig = {
 	],
 	/** 联系邮箱 */
 	email: 'yxu.xu@tum.de',
+	/** WhatsApp（带国家区号，用于直接跳转聊天） */
+	whatsapp: '+4915231423682',
 };
