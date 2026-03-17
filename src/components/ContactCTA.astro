@@ -5,11 +5,17 @@ import { siteConfig } from '../config';
 ---
 
 <aside>
-	<h2>动动手指，破除AT立场</h2>
-	<CallToAction href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hi Yang! I found your portfolio and would like to connect.')}`}>
-		WhatsApp Me
-		<Icon icon="paper-plane-tilt" size="1.2em" />
-	</CallToAction>
+	<h2>动动手指 破除AT立场</h2>
+	<div class="cta-buttons">
+		<CallToAction href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hi Yang! I found your portfolio and would like to connect.')}`}>
+			WhatsApp Me
+			<Icon icon="paper-plane-tilt" size="1.0em" />
+		</CallToAction>
+		<CallToAction href="/assets/img/wechat_qrcode.jpg" target="_blank">
+			微信 Contact
+			<Icon icon="wechat-logo" size="1.0em" />
+		</CallToAction>
+	</div>
 </aside>
 
 <style>
@@ -28,7 +34,14 @@ import { siteConfig } from '../config';
 	h2 {
 		font-size: var(--text-lg);
 		text-align: center;
-		max-width: 15ch;
+		max-width: 20ch;
+	}
+
+	.cta-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: center;
 	}
 
 	@media (min-width: 50em) {
@@ -40,8 +53,12 @@ import { siteConfig } from '../config';
 		}
 
 		h2 {
-			font-size: var(--text-xl);
+			font-size: var(--text-2xl);
 			text-align: left;
+		}
+
+		.cta-buttons {
+			justify-content: flex-end;
 		}
 	}
 </style>
