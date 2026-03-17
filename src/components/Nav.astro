@@ -17,6 +17,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 const base = import.meta.env.BASE_URL;
 
+/** Check if standalone mode is enabled (hide navigation) */
+const isStandalone = Astro.url.searchParams.get('standalone') === 'true';
+
 /** Resolve internal links with base path for GitHub Pages */
 const resolveHref = (href: string) =>
 	href.startsWith('http') ? href : `${base}${href === '/' ? '' : href.slice(1)}`;
@@ -30,7 +33,7 @@ const isCurrentPage = (href: string) => {
 };
 ---
 
-<nav>
+<nav class:list={{ hidden: isStandalone }}>
 	<div class="menu-header">
 		<a href={base} class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
@@ -147,6 +150,10 @@ const isCurrentPage = (href: string) => {
 		font-family: var(--font-brand);
 		font-weight: 500;
 		margin-bottom: 3.5rem;
+	}
+
+	nav.hidden {
+		display: none;
 	}
 
 	.menu-header {
