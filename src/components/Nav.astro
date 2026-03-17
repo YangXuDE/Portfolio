@@ -107,6 +107,11 @@ const isCurrentPage = (href: string) => {
 </nav>
 
 <script>
+	// Hide nav in standalone mode
+	if (new URLSearchParams(window.location.search).get('standalone') === 'true') {
+		document.querySelector('nav')?.classList.add('hidden');
+	}
+
 	class MenuButton extends HTMLElement {
 		constructor() {
 			super();
