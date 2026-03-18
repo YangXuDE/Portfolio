@@ -4,9 +4,10 @@ import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../config';
 const base = import.meta.env.BASE_URL;
+const standalone = Astro.url.searchParams.get('standalone') === 'true';
 ---
 
-<BaseLayout title={`Expo Resume | ${siteConfig.author}`} description="展会兼职简历 - 徐阳 (Yang Xu)">
+<BaseLayout title={`Expo Resume | ${siteConfig.author}`} description="展会兼职简历 - 徐阳 (Yang Xu)" hideSocials={standalone}>
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -220,7 +221,7 @@ const base = import.meta.env.BASE_URL;
 			</section>
 		</main>
 
-		<ContactCTA />
+		{standalone ? null : <ContactCTA />}
 	</div>
 </BaseLayout>
 
