@@ -141,10 +141,9 @@ const assets = {
 			.hide-socials {
 				background: var(--gray-999);
 			}
-			.hide-socials :global(nav),
-			.hide-socials :global(footer) {
-				display: none;
-			}
 		</style>
+		{hideSocials && <style is:global>
+			nav, footer { display: none !important; }
+		</style>}
 	</body>
 </html>
