@@ -3,8 +3,10 @@ import Icon from './Icon.astro';
 import { siteConfig } from '../config';
 
 const currentYear = new Date().getFullYear();
+const isStandalone = Astro.url.searchParams.get('standalone') === 'true';
 ---
 
+{isStandalone ? null : (
 <footer>
 	<div class="group">
 		<p>
@@ -19,6 +21,7 @@ const currentYear = new Date().getFullYear();
 		))}
 	</p>
 </footer>
+)}
 <style>
 	footer {
 		display: flex;
